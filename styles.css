@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.nogut {
+  padding: 0;
+}
+
+.back {
+  background-color: #23282D;
+}
+
+.fa-github {
+  font-size: 35px;
+  color: #fff;
+  padding-right: 15px;
+}
+
+.pcolor {
+  border: none;
+  background-color: #3F4347;
+}
+
+.pcolor::placeholder {
+  color: #cacaca;
+}
+
+.userimage {
+  width: 20px;
+}
+
+.image-profile {
+  width: 260px;
+}
+
+button.followbtn {
+  width: 260px;
+  border-color: #cacaca;
+}
+
+.org-insert {
+  margin-left: 0px;
+}
+
+.org-title {
+  border-top: solid 1px #cacaca;
+  padding-top: 20px;
+  width: 260px;
+}
+
+.orgpic {
+  width: 40px;
+}
+
+.dropdown-toggle::after {
+  margin: 0;
+}
+
+#barlength {
+  width: 300px;
+  min-height: 12px;
+  height: 12px;
+}
+
+#barlengthtwo {
+  margin-left: 14px;
+  min-height: 25px;
+  height: 25px;
+}
+
+.sticknav {
+  border-bottom: 1px #cacaca solid;
+  margin-bottom: 15px;
+  background-color: white;
+}
+.sticknav a {
+  font-size: 14px;
+  padding-bottom: 12px;
+  margin-right: 15px;
+  border-bottom: 2px transparent solid;
+}
+.sticknav a:hover {
+  border-bottom-color: #cacaca;
+}
+
+.botbord {
+  border-bottom: solid 1px #D3D3D3;
+  padding-bottom: 15px;
+}
+
+.newbtn {
+  margin-left: 5px;
+  width: 75px;
+}
+
+.entry {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #D3D3D3;
+  position: relative;
+}
+.entry h4 {
+  font-size: 20px;
+}
+.entry h4 a {
+  color: #0066D2;
+}
+.entry div {
+  font-size: 12px;
+}
+.entry div a {
+  color: grey;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.vim {
+  color: #1B9F50;
+}
+
+.org {
+  width: 35px;
+  height: 35px
+  color: #3572A3;
+}
+
+.java {
+  color: #F1E065;
+}
+
+.forked span {
+  font-size: 12px;
+}
+.forked a {
+  color: grey;
+  font-size: 12px;
+}
+.forked a:hover {
+  color: #0066D2;
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+}
+
+.btn {
+  border-color: #cacaca;
+}
+
+.starbtn {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-color: #cacaca !important;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.barfoot li {
+  display: inline-block;
+  padding: 8px;
+}
+
+.bottomcat {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#panel {
+  display: none;
+}
