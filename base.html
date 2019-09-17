@@ -1,0 +1,262 @@
+<!-- <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GitHub Repos</title>
+  <link https://octicons.github.com/ </link> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  </link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/build.css">
+  </link>
+  <link rel="stylesheet" href="css/styles.css">
+  </link>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark row">
+        <input class="form-control mr-sm-2 col-md-3" type="search or jump to" placeholder="Search or Jump to" aria-label="Search or Jump to">
+        <ul class="nav col">
+          <li class="nav-item-top">
+            <a class="nav-link" href="https://github.com/pulls">
+              <p class="text-white">Pull Requests</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <p class="text-white">Issues</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <p class="text-white">Marketplace</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <p class="text-white">Explore</p>
+            </a>
+          </li>
+        </ul>
+        <div class="float-right">
+        <div class="col">
+          <a href="#"><i class="fas fa-bell color-white"></i></a>
+          <div class="btn-group">
+            <a href="#"><i class="fas fa-plus"></i></a>
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+            <!-- <div class="dropdown-menu">
+            </div> -->
+            <div class="btn-group">
+              <a href="#"><img src="https://avatars0.githubusercontent.com/u/50116403?s=460&v=4" alt=""></a>
+              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <!-- <div class="dropdown-menu">
+              </div> -->
+            </div>
+          </div>
+        </div>
+        </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+    <!-- <div class="">
+      <nav class="navbar navbar-light bg-light border-bottom">
+        <a class="navbar" href="#"></a>
+        <div class="nav-underheader">
+          <ul class="nav-col-md">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Repositories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Following</a>
+            </li>
+          </ul>
+        </div>
+    </div> -->
+    <!-- <div class="topnav">
+    <a>Home</a>
+    <a>News</a>
+  </div>-->
+    <div class="col-md-3 insert">
+      <script id="entry-template" type="text/x-handlebars-template">
+
+      <div>
+        <img src="{{data.avatar_url}}" class="card-img-top" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{data.name}}</h5>
+        <a href="#" class="btn btn-primary">Edit Profile</a>
+        <p class="card-text">{{data.bio}}</p>
+
+      </div>
+      <input class="form-control mr-sm-2 repo-search" type="Find a Repository" placeholder="Find a Repository...." aria-label="Find a Repository">
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Type:All
+          </button>
+        </div>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language:All
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="#">Dropdown link</a>
+              <a class="dropdown-item" href="#">Dropdown link</a>
+            </div>
+            </div>
+            <button id="btnGroupDrop1" type="button" class="badge badge-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              New
+            </button>
+
+    </script>
+      <!-- <aside class="col-md-3"> -->
+      <div class='profile'></div>
+      <span class='orgs'></span>
+      <!-- </aside> -->
+    </div>
+
+      <div class="col-md-7 insertrepos">
+        <script id="repos-template" type="text/x-handlebars-template">
+          <!-- {{#each data}} -->
+        <main class="user-repository-list">
+          <h3><a href=""></a>{{name}}</h3>
+          <div class="text-right">
+            <button type="button" class="btn btn-light btn-sm"><i class="fas fa-star"></i>Star</button>
+          </div>
+          <span class='repo-language-color'>
+            <p>HTML</p>
+            <script class="date"></script>
+
+
+
+        </span>
+
+        </main>
+        <!-- {{/each}} -->
+
+        </script>
+
+
+
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <footer class="col-md">
+        <p>Copyright Github, Inc</p>
+        <ul class="footer-left">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <div class="icon"><i class="fab fa-github-square" href="#"></i></div>
+        <ul class="footer-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Github</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Training</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+      </footer>
+    </div>
+
+
+
+
+    <script id="entry-template" type="text/x-handlebars-template">
+      <img src="{{data.avatar_url}}" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">{{data.name}}</h5>
+  <button type="button" class="btn btn-light btn-lg btn-block">Edit Profile</button>
+  <p class="card-text">{{data.bio}}</p>
+  <div class="avatar-nickname">
+        <span>
+          <p>{{data.login}}</p>
+        </span>
+        <button type="button" class="btn btn-light btn-lg btn-block">Edit Profile</button>
+        <p class="font-weight-light"><a href="#">Block or Report user</a></p>
+      </div>
+
+</div>
+</script>
+    <script id='organizations-template' type='text/x-handlebars-template'>
+      <h5 class='border-top'>Organizations</h5>
+
+      <span class=''><img class='org-pic' src='{{avatar_url}}' alt=""></span>
+    <p>{{bio}}</p>
+  </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src='main.js'></script>
+
+</body>
+
+</html>
